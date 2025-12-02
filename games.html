@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>game 网</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    /* 网格布局：一行 4 个卡片 */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* 卡片样式 */
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    /* 图片为正方形，自适应卡片宽度 */
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* 正方形 */
+      object-fit: cover;   /* 裁剪居中，不变形 */
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin: 10px 0 5px 0;
+      color: #222;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      padding: 0 10px;
+      flex-grow: 1;
+    }
+
+    .card span {
+      font-weight: bold;
+      color: #007BFF;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* 响应式：屏幕 < 1200px 一行 3 个，< 900px 一行 2 个，< 600px 一行 1 个 */
+    @media (max-width: 1200px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Game Gallery</h1>
+    <div class="grid-container">
+  <article class="card">
+    <a href="https://plays.org/game/flames-and-fortune/">
+      <img src="image\Flames and Fortune.png">
+    </a>
+    <h3>Flames and Fortune</h3>
+    <p>This is an RPG-themed card shedding game. Discard all 54 cards in the deck to
+      have the Pyro-Paladin escape the dungeon.</p>
+    <span>Flames and Fortune</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/colorful-beetles/">
+      <img src="image\Colorful Beetles.png">
+    </a>
+    <h3>Colorful Beetles</h3>
+    <p>This is a pattern matching game where players paint a canvas across or
+      vertically, pouring paints in the correct order to create the pattern shown near
+      the top of the screen. If you make a mistake you can repeatedly reuse any of the
+      paints until you correctly complete the pattern. Play through all 70 stages.</p>
+    <span>Colorful Beetles</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/play-connect-four/">
+      <img src="image\Play Connect Four.png">
+    </a>
+    <h3>Play Connect Four</h3>
+    <p>This is a customizable take on the classic line forming board game. Take turns
+      dropping tokens onto a grid and be the first to form a full horizontal,
+      vertical, or diagonal row of 4 tokens.</p>
+    <span>Play Connect Four</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/tictoc-challenge/">
+      <img src="image\TicToc Challenge.png">
+    </a>
+    <h3>TicToc Challenge</h3>
+    <p>This is a collection of 50 idle clicker and logic puzzle mini games. Beat each
+      stage to unlock the next. Stop the item in the blue area, or tap the correct
+      number of times before the timer runs out to win.</p>
+    <span>TicToc Challenge</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/imposter-connect/">
+      <img src="image\Imposter Connect.png">
+    </a>
+    <h3>Imposter Connect</h3>
+    <p>This is a connect 3 matching game inspired by Among Us. Draw vertical,
+      horizontal, and diagonal connecting lines which connect chains of 3 or more
+      crewmates wearing the same color space suit to clear them from the screen and
+      earn points. Clear as many crewmates as you can before the timer runs out.</p>
+    <span>Imposter Connect</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/sprycik/">
+      <img src="image\Sprycik.png">
+    </a>
+    <h3>Sprycik</h3>
+    <p>This is a 16-stage sliding puzzle/platform combination escape room game. Move the
+      tunnels around to create a path for your character to walk and climb toward the
+      exit door.</p>
+    <span>Sprycik</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/pathway-puzzle/">
+      <img src="image\Pathway Puzzle.png">
+    </a>
+    <h3>Pathway Puzzle</h3>
+    <p>This is a simple, yet engaging Sokoban-inspired room escape game. Push boxes
+      where they must go to create a path toward the X on the floor. Step on the X to
+      escape each of the 17 levels. Avoid running into spikes. Use boxes to activate
+      or deactivate switches, & to fill in holes in the playing field.</p>
+    <span>Pathway Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/scorpion-valley/">
+      <img src="image\Scorpion Valley.png">
+    </a>
+    <h3>Scorpion Valley</h3>
+    <p>This is a Bomber Man-inspired level destruction game. Blow up the invading
+      scorpions without blowing yourself up. Defeat all the scorpions on each level to
+      clear all 20 stages.</p>
+    <span>Scorpion Valley</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/orbitronon/">
+      <img src="image\Orbitronon.png">
+    </a>
+    <h3>Orbitronon</h3>
+    <p>This is a 20-stage escape room puzzle game where you take control of a robot that
+      only flies in circles. Choose the succession of orbits needed help the robot
+      unlock and reach the exit door.</p>
+    <span>Orbitronon</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/merge-number-woody/">
+      <img src="image\Merge Number Woody.png">
+    </a>
+    <h3>Merge Number Woody</h3>
+    <p>This is a block merging game inspired by 2048. Merge identical number blocks to
+      form blocks twice the value. Some blocks are linked together, requiring you to
+      match either side of the chain with another block to break the locking chain.
+      Keep merging blocks until you run out of space. See if you can merge all the way
+      to 1 million.</p>
+    <span>Merge Number Woody</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/chicken-merge-and-war/">
+      <img src="image\Chicken Merge and War.png">
+    </a>
+    <h3>Chicken Merge and War</h3>
+    <p>This is a base defense game where players fight off rows of incoming zombies. Buy
+      chickens, merge them together, and purchase upgrades to boost your attack and
+      advance through all 30 waves.</p>
+    <span>Chicken Merge and War</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/stacked-animals/">
+      <img src="image\Stacked Animals.png">
+    </a>
+    <h3>Stacked Animals</h3>
+    <p>This is an animal-themed sorting game. Sort the colored disks by color to form an
+      animal. Form all the animals to complete each level. Play through 1,210 stages.</p>
+    <span>Stacked Animals</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/lumberjack-evolution/">
+      <img src="image\Lumberjack Evolution.png">
+    </a>
+    <h3>Lumberjack Evolution</h3>
+    <p>This is an idle tree chopping game. Chop down the great evergreen trees and earn
+      cash for upgrades, then chop down some more trees. Don’t worry; they grow
+      back.</p>
+    <span>Lumberjack Evolution</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/woodland-slide/">
+      <img src="image\Woodland Slide.png">
+    </a>
+    <h3>Woodland Slide</h3>
+    <p>This is a sliding block line forming game inspired by Tetris. Slide each block
+      around to form and clear full lines. Move carefully as each move you make adds
+      another line at the bottom of the grid.</p>
+    <span>Woodland Slide</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/pan-slot/">
+      <img src="image\Pan Slot.png">
+    </a>
+    <h3>Pan Slot</h3>
+    <p>This is a giant panda-themed slot machine game. Place your bets, spin, and see if
+      you get 8 or more identical symbols onscreen.</p>
+    <span>Pan Slot</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/rubbers-master/">
+      <img src="image\Rubbers Master.png">
+    </a>
+    <h3>Rubbers Master</h3>
+    <p>This is a 30-stage level clearing puzzle game. Remove tangled sets of rubber
+      bands in the correct order to clear them from the screen. Rubber bands get stuck
+      on other bands that are in the middle of their loops, forcing you to remove the
+      bands in a certain order. Some bands have locks holding them in place, requiring
+      you to grab the key before you can remove the locked band.</p>
+    <span>Rubbers Master</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/jumpster/">
+      <img src="image\Jumpster.png">
+    </a>
+    <h3>Jumpster</h3>
+    <p>This is a 25-stage platform puzzle game. Reach the flag within a limited number
+      of jumps. Collect hearts on your journey to earn more jumps. Avoid hitting the
+      spikes.</p>
+    <span>Jumpster</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/slidungeon-2/">
+      <img src="image\Slidungeon 2.png">
+    </a>
+    <h3>Slidungeon 2</h3>
+    <p>This is a 20-stage retro-themed escape room puzzle game. Defeat all the monsters
+      inside the dungeon, then make your way out through the maze to the exit ladder
+      leading to the next level.</p>
+    <span>Slidungeon 2</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/3d-pet-sliding-puzzle/">
+      <img src="image\3D Pet Sliding Puzzle.png">
+    </a>
+    <h3>3D Pet Sliding Puzzle</h3>
+    <p>This is a collection of 40 pet-themed slide puzzles for kids. Slide the puzzle
+      pieces around until you form the image.</p>
+    <span>3D Pet Sliding Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/find-the-way-home-maze/">
+      <img src="image\Find The Way Home Maze.png">
+    </a>
+    <h3>Find The Way Home Maze</h3>
+    <p>This is a cute cartoony 30-stage maze game where players encounter monsters,
+      cannons, and bombs. Avoid dying from the obstacles, find and collect up to 3
+      stars on each stage, and exit through the purple portal to next level.</p>
+    <span>Find The Way Home Maze</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/physics-breaking-boxes/">
+      <img src="image\Physics Breaking Boxes.png">
+    </a>
+    <h3>Physics Breaking Boxes</h3>
+    <p>This is a Sokoban-inspired push the boxes game. Push the boxes around and bring
+      them (and your player character) to the markers on the bottom of the screen.</p>
+    <span>Physics Breaking Boxes</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/vegetables-crush/">
+      <img src="image\Vegetables Crush.png">
+    </a>
+    <h3>Vegetables Crush</h3>
+    <p>This is a 30-stage fruit- and vegetable-themed connect 3 game. Draw connecting
+      lines to create chains of 3 or more identical fruits to clear them from the
+      grid. Keep clearing fruits and vegetables until you reach the level’s
+      target score.</p>
+    <span>Vegetables Crush</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/teehees/">
+      <img src="image\Teehees.png">
+    </a>
+    <h3>Teehees</h3>
+    <p>This is a Sokoban inspired box pushing logic game. Push boxes and use glitches to
+      move through the level. Reach the spiral tile to beat each stage.</p>
+    <span>Teehees</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/gemdoku/">
+      <img src="image\Gemdoku.png">
+    </a>
+    <h3>Gemdoku</h3>
+    <p>This is a timed spatial puzzle game. Drag and drop the puzzle pieces to fit them
+      all into the space provided within the time limit and number of moves provided.</p>
+    <span>Gemdoku</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/tomb-run-puzzle-2/">
+      <img src="image\Tomb Run Puzzle 2.png">
+    </a>
+    <h3>Tomb Run Puzzle 2</h3>
+    <p>This is a 35-stage retro-themed sliding puzzle game. Collect all the coins in the
+      level by moving the character in the right sequence. Avoid hitting obstacles or
+      getting stuck.</p>
+    <span>Tomb Run Puzzle 2</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/skater-boys-journey/">
+      <img src="image\Skater Boy’s Journey.png">
+    </a>
+    <h3>Skater Boy’s Journey</h3>
+    <p>This is a retro-styled skating platform escape room game. Help the skater collect
+      the wrenches and reach his toolbox while skating past various hazards. Play
+      through all 16 stages.</p>
+    <span>Skater Boy’s Journey</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/monster-escape/">
+      <img src="image\Monster Escape.png">
+    </a>
+    <h3>Monster Escape</h3>
+    <p>This is a retro-themed escape room game. Rotate the room to change the gravity
+      and reach the key. Pick up the key and make your way to the door while avoiding
+      spikes and falling crates. Play through all 61 stages.</p>
+    <span>Monster Escape</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/bubble/">
+      <img src="image\Bubble.png">
+    </a>
+    <h3>Bubble</h3>
+    <p>This is a tap-timing based competitive bubble blowing game. Blow the bubbles
+      until it is just the size of the dashed circle. Be the first to score 15 points
+      to win.</p>
+    <span>Bubble</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/frostbound/">
+      <img src="image\Frostbound.png">
+    </a>
+    <h3>Frostbound</h3>
+    <p>This is a pixelated puzzle platformer where you control a wizard who can jump
+      like ordinary platformers and can also fall through the floors onto floors
+      above. Open all the treasure chests to complete each level and play through all
+      16 stages. Avoid hazards like flying bats, fires, spikes, and spinning
+      tornadoes.</p>
+    <span>Frostbound</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/golf-adventure-game/">
+      <img src="image\Golf Adventure Game.png">
+    </a>
+    <h3>Golf Adventure Game</h3>
+    <p>This is a simple game of miniature golf. Get the ball past the boxes and into the
+      hole within 2 strokes to win each level.</p>
+    <span>Golf Adventure Game</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/lancerot/">
+      <img src="image\Lancerot.png">
+    </a>
+    <h3>Lancerot</h3>
+    <p>This is a simple tossing game you can play against computer or human players.
+      Toss a mace at the right time, hit the other knights, and earn points. Be the
+      first to earn 10 points to win.</p>
+    <span>Lancerot</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/memory-game-fruits/">
+      <img src="image\Memory Game Fruits.png">
+    </a>
+    <h3>Memory Game Fruits</h3>
+    <p>This is a 12-stage card matching memory game themed after fruits.</p>
+    <span>Memory Game Fruits</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/box-boy/">
+      <img src="image\Box Boy.png">
+    </a>
+    <h3>Box Boy</h3>
+    <p>This is a retro-styled Sokoban game. Push the boxes to the designated spaces in
+      the proper sequence without any of them getting stuck. Play through all 40
+      challenging stages.</p>
+    <span>Box Boy</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/baggage-reclaim/">
+      <img src="image\Baggage Reclaim.png">
+    </a>
+    <h3>Baggage Reclaim</h3>
+    <p>This is a 50-stage slide puzzle game. Move the suitcases around to create a path
+      for the red suitcase to get out.</p>
+    <span>Baggage Reclaim</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/noob-rainbow-friends/">
+      <img src="image\Noob Rainbow Friends.png">
+    </a>
+    <h3>Noob Rainbow Friends</h3>
+    <p>This is a simple 20-stage shooting game aesthetically inspired by Minecraft.
+      Shoot down all your foes using only the bullets you have on hand.</p>
+    <span>Noob Rainbow Friends</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/fun-golf/">
+      <img src="image\Fun Golf.png">
+    </a>
+    <h3>Fun Golf</h3>
+    <p>This is a simple game of mini golf. Send the ball to the hole by carefully aiming
+      and charging each stroke. Plan each move to avoid barriers and spikes.</p>
+    <span>Fun Golf</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/triangle-tactics/">
+      <img src="image\Triangle Tactics.png">
+    </a>
+    <h3>Triangle Tactics</h3>
+    <p>This is a turn-based fighting strategy game where you have to fight your way
+      through rooms to find the exit stairs. Collect swords, shields & heart
+      containers to power up your fighter. Play through all 20 stages.</p>
+    <span>Triangle Tactics</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/zenifer-adventure/">
+      <img src="image\Zenifer Adventure.png">
+    </a>
+    <h3>Zenifer Adventure</h3>
+    <p>This is a 9-stage horizontal platform running and collecting game. Evade the rock
+      monster while collecting clovers and gems.</p>
+    <span>Zenifer Adventure</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/kitchen-merger/">
+      <img src="image\Kitchen Merger.png">
+    </a>
+    <h3>Kitchen Merger</h3>
+    <p>This is a simple fruit merging game. Drop the fruits down the play area and merge
+      identical fruits together. Keep playing until the stack of fruits reaches the
+      top of the play area.</p>
+    <span>Kitchen Merger</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/bubble-shooter-rescue-the-animals/">
+      <img src="image\Bubble Shooter Rescue The Animals.png">
+    </a>
+    <h3>Bubble Shooter Rescue The Animals</h3>
+    <p>This is a timed bubble shooting game where you must also free animals imprisoned
+      in the bubbles. Form rows of 3 or more identically colored bubbles by shooting
+      new ones onto the stack. Play through all 20 timed levels or see how long you
+      can last in endless mode.</p>
+    <span>Bubble Shooter Rescue The Animals</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/archery-hunter/">
+      <img src="image\Archery Hunter.png">
+    </a>
+    <h3>Archery Hunter</h3>
+    <p>This is a simple archery game. Take out a succession of monsters and earn a
+      bounty from each one. Keep shooting monsters until they knock you out, then
+      return to them with special arrows you’ve bought with the cash you earned.</p>
+    <span>Archery Hunter</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/12-fruits/">
+      <img src="image\12-Fruits.png">
+    </a>
+    <h3>12-Fruits</h3>
+    <p>This is a number tile merging game where players move number tiles around a 5 by
+      5 grid of 25 cells. Drag a number tile to the location of another tile of the
+      same value to merge both tiles into a tile valued one integer higher. Keep
+      merging until you reach 12.</p>
+    <span>12-Fruits</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/animal-fusion-2048/">
+      <img src="image\Animal Fusion 2048.png">
+    </a>
+    <h3>Animal Fusion 2048</h3>
+    <p>This is a ball dropping and merging game inspired by the original Suika Game.
+      Merge animal balls together until you form the elephant. Don’t let the
+      stack reach the top of the play area.</p>
+    <span>Animal Fusion 2048</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/unpuzzle-master/">
+      <img src="image\Unpuzzle Master.png">
+    </a>
+    <h3>Unpuzzle Master</h3>
+    <p>In this logic puzzle game you must remove all the arrows in the right sequence to
+      clear them from the screen within the given number of moves provided. Play
+      through all 45 stages.</p>
+    <span>Unpuzzle Master</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/knight-platformer/">
+      <img src="image\Knight Platformer.png">
+    </a>
+    <h3>Knight Platformer</h3>
+    <p>This is a simple 15-stage retro-themed platform game where you must take out all
+      the enemies before exiting a level. Stomp on or throw swords at all the enemies.
+      Be careful to not fall off platform and make it to the sign to go to the next
+      stage.</p>
+    <span>Knight Platformer</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/asteroids-rush/">
+      <img src="image\Asteroids Rush.png">
+    </a>
+    <h3>Asteroids Rush</h3>
+    <p>This is a space shooting game. Evade the oncoming asteroids and destroy as many
+      of them as you can.</p>
+    <span>Asteroids Rush</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/2248-merge-puzzle/">
+      <img src="image\2248 Merge Puzzle.png">
+    </a>
+    <h3>2248 Merge Puzzle</h3>
+    <p>This is a 2048-inspired number merging game. Draw vertical, horizontal, or
+      diagonal connecting lines to connect same-valued tiles and tiles which are worth
+      twice as much as the prior tile. Merge numbers in chains to create number tiles
+      of larger values & score points.</p>
+    <span>2248 Merge Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/guess-word-online/">
+      <img src="image\Guess Word Online.png">
+    </a>
+    <h3>Guess Word Online</h3>
+    <p>This is a word spelling game. Select the correct letter tiles one at a time from
+      left to right to type in the word being described using the letters shown
+      onscreen. Press the X button in the lower right if you make an error. Take a
+      hint if you need a clue to figure out the word.</p>
+    <span>Guess Word Online</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/fortune-cleopatra-slots/">
+      <img src="image\Fortune Cleopatra Slots.png">
+    </a>
+    <h3>Fortune Cleopatra Slots</h3>
+    <p>This is a slots game inspired by the cunning last Pharaoh of ancient Egypt. Will
+      you strike it far luckier than the ill-fated Queen of the Nile? Spin and see.</p>
+    <span>Fortune Cleopatra Slots</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/skyscraper/">
+      <img src="image\Skyscraper.png">
+    </a>
+    <h3>Skyscraper</h3>
+    <p>This is a simple 30-stage tower building game. Stop the floor pieces from moving
+      from side to side to build up the tower. Keep building the tower up until you
+      drop the roof and complete the building. Lay quickly with precision to score up
+      to 3 stars on each building.</p>
+    <span>Skyscraper</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/mindfire/">
+      <img src="image\Mindfire.png">
+    </a>
+    <h3>Mindfire</h3>
+    <p>This is a simple turn-based shooting logic puzzle game. Clear each of the 12
+      stages of enemy stickmen while avoiding running into spikes or getting shot by
+      your opponents. Shoot while not horizontally aligned to activate the turn-based
+      countdowns & shoot from the same horizontal plane as enemies to hit them.</p>
+    <span>Mindfire</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/dont-touch-my-carrots/">
+      <img src="image\Don’t Touch My Carrots.png">
+    </a>
+    <h3>Don’t Touch My Carrots</h3>
+    <p>This is a simple zombie shooting survival game. Shoot down wave upon wave of the
+      advancing zombie army to protect your crops for as long as possible.</p>
+    <span>Don’t Touch My Carrots</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/shooting-balls/">
+      <img src="image\Shooting Balls.png">
+    </a>
+    <h3>Shooting Balls</h3>
+    <p>In this game you must hit a specified number of balls identical to the one
+      you’re launching before the timer runs out to finish each level.</p>
+    <span>Shooting Balls</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/find-the-3-differences/">
+      <img src="image\Find the 3 Differences.png">
+    </a>
+    <h3>Find the 3 Differences</h3>
+    <p>This is a timed spot the difference game. Look for the differences in the two
+      pictures as quickly as you can before the timer expires. Play through all 80
+      scenes.</p>
+    <span>Find the 3 Differences</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/flechas/">
+      <img src="image\Flechas.png">
+    </a>
+    <h3>Flechas</h3>
+    <p>In this game your goal is to shoot the shifting target as many times as you can
+      with a moving crossbow on a track. Play by yourself or challenged friends or
+      computer players.</p>
+    <span>Flechas</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/clicker-banana/">
+      <img src="image\Clicker Banana.png">
+    </a>
+    <h3>Clicker Banana</h3>
+    <p>This is an idle clicking points earning game. click or tap on the banana to earn
+      points, then spend the points on upgrades to increase the points you gain from
+      selecting the banana.</p>
+    <span>Clicker Banana</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/dog-2048/">
+      <img src="image\Dog 2048.png">
+    </a>
+    <h3>Dog 2048</h3>
+    <p>This is a dog-themed number merging game inspired by the hit game 2048. Merge
+      identical tiles to form new tiles of larger value. Keep merging until you reach
+      the 2048 tile.</p>
+    <span>Dog 2048</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/dots/">
+      <img src="image\Dots.png">
+    </a>
+    <h3>Dots</h3>
+    <p>This is a Sudoku-like numbers-based spatial logic game. Light up the dots based
+      on the number indicated in each square of the grid.</p>
+    <span>Dots</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/r-league/">
+      <img src="image\R League.png">
+    </a>
+    <h3>R League</h3>
+    <p>This is a simple steering-based racing game. Race a full lap around the figure 8
+      course to score. Be the first among your opponents to finish 10 laps to win.
+      Careful not to crash hard into the walls or you’ll start the lap over
+      again.</p>
+    <span>R League</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/starship-bullet/">
+      <img src="image\Starship Bullet.png">
+    </a>
+    <h3>Starship Bullet</h3>
+    <p>This is an abstract space shooting game. Evade the enemy ships and bullets while
+      shooting them down for as long as you can.</p>
+    <span>Starship Bullet</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/2048-sea-vehicles/">
+      <img src="image\2048 Sea Vehicles.png">
+    </a>
+    <h3>2048 Sea Vehicles</h3>
+    <p>This is a version of the hit mobile math game themed for boats and other means of
+      aquatic transportation. Move and merge pairs of identical tiles to grow their
+      value until you get the 2048 tile.</p>
+    <span>2048 Sea Vehicles</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/jetpack-adventure/">
+      <img src="image\Jetpack Adventure.png">
+    </a>
+    <h3>Jetpack Adventure</h3>
+    <p>This is an endless running game that draws some inspiration from Jetpack Joyride.
+      As a guy with a jetpack, escape the evil lab and collect as many coins as you
+      can.</p>
+    <span>Jetpack Adventure</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/connection-game/">
+      <img src="image\Connection Game.png">
+    </a>
+    <h3>Connection Game</h3>
+    <p>In this game you must group together a set of 4 words to reveal a related word.</p>
+    <span>Connection Game</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/brick-breaker-retro/">
+      <img src="image\Brick Breaker Retro.png">
+    </a>
+    <h3>Brick Breaker Retro</h3>
+    <p>This is a simple yet challenging 30-stage brick breaking game. Launch a ball from
+      a paddle and break as many blocks as you can. Collect power ups dropped by the
+      blocks to help you clear the blocks much faster.</p>
+    <span>Brick Breaker Retro</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/2048-air-vehicles/">
+      <img src="image\2048 Air Vehicles.png">
+    </a>
+    <h3>2048 Air Vehicles</h3>
+    <p>This is a version of the classic mobile game themed after air transportation.
+      Merge identical tiles to create tiles that are double the value. Keep merging
+      tiles until you get the 2048 tile.</p>
+    <span>2048 Air Vehicles</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/evilmun/">
+      <img src="image\Evilmun.png">
+    </a>
+    <h3>Evilmun</h3>
+    <p>This is a 12-stage retro-themed escape room platforming game. Work in tandem as a
+      knight and wizard to make your way out of the chamber.</p>
+    <span>Evilmun</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/charlie-and-kittens/">
+      <img src="image\Charlie and Kittens.png">
+    </a>
+    <h3>Charlie and Kittens</h3>
+    <p>This is an Angry Birds-inspired slingshot level destruction game. As Charlie,
+      take out the creepy crows and save the kittens they’ve captured. Play
+      through all 20 stages.</p>
+    <span>Charlie and Kittens</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/isometric-run/">
+      <img src="image\Isometric Run.png">
+    </a>
+    <h3>Isometric Run</h3>
+    <p>This is a sort-of 3D looking endless obstacle evasion game. As a cube, squish
+      yourself down to get under objects and jump to go over obstacles. Keep going for
+      as long as you can.</p>
+    <span>Isometric Run</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/around/">
+      <img src="image\Around.png">
+    </a>
+    <h3>Around</h3>
+    <p>This is a simple 2-player racing game. Steer your racecar away from the walls of
+      the track to prevent crashes and maintain speed. Win by making five laps before
+      your opponent does.</p>
+    <span>Around</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/space-slide-puzzle/">
+      <img src="image\Space Slide Puzzle.png">
+    </a>
+    <h3>Space Slide Puzzle</h3>
+    <p>This is a 60-stage Sokoban-inspired escape room puzzle game. Slide blocks and
+      search out flag pieces to create a path to the portal. Watch out for hazards
+      like force fields and patrol orbs.</p>
+    <span>Space Slide Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/infinite-tunnel/">
+      <img src="image\Infinite Tunnel.png">
+    </a>
+    <h3>Infinite Tunnel</h3>
+    <p>This is an endless obstacle evasion game played entirely in the first person.
+      Find a way to slip through the gaps between the shapes by making sure that the
+      gap you’re trying to pass through is on the bottom center of the screen.</p>
+    <span>Infinite Tunnel</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/coloring-three-little-pigs/">
+      <img src="image\Coloring Three Little Pigs.png">
+    </a>
+    <h3>Coloring Three Little Pigs</h3>
+    <p>This is a simple coloring book game themed after the classic fairy tale. Color in
+      12 pages that show an event in the story. If you want, you can even save your
+      works on your device as JPG picture files.</p>
+    <span>Coloring Three Little Pigs</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/pirates/">
+      <img src="image\Pirates.png">
+    </a>
+    <h3>Pirates</h3>
+    <p>This is a tap timing multiplayer shooting game where you must shoot your cannons
+      at the pirate ships which are the same color as enemies. Earn 10 points before
+      the other players to win.</p>
+    <span>Pirates</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/correct-football/">
+      <img src="image\Correct Football.png">
+    </a>
+    <h3>Correct Football</h3>
+    <p>This is a soccer themed air hokey inspired game. Push all your opponent’s
+      pieces into the goals before they do the same to you. Choose to play against the
+      computer or a friend.</p>
+    <span>Correct Football</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/kart-stroop-challenge/">
+      <img src="image\Kart Stroop Challenge.png">
+    </a>
+    <h3>Kart Stroop Challenge</h3>
+    <p>This is a simple driving and color-matching game. Drive the cart through each of
+      the gates of the color written above the gates.</p>
+    <span>Kart Stroop Challenge</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/ninja-fruit-slice/">
+      <img src="image\Ninja Fruit Slice.png">
+    </a>
+    <h3>Ninja Fruit Slice</h3>
+    <p>This is a simple idle fruit-slicing game. Slice as many fruits as you can without
+      hitting any of the bombs.</p>
+    <span>Ninja Fruit Slice</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/minie-adventure-girl/">
+      <img src="image\Minie Adventure Girl.png">
+    </a>
+    <h3>Minie Adventure Girl</h3>
+    <p>This is a 5-stage retro-styled horizontal platforming adventure game. As our
+      young heroine, move through the level and reach the treasure chest at the end
+      within 5 minutes. Avoid or take out monsters and collect as many coins as you
+      can.</p>
+    <span>Minie Adventure Girl</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/mc8bit/">
+      <img src="image\Mc8Bit.png">
+    </a>
+    <h3>Mc8Bit</h3>
+    <p>This is a tandem horizontal 2D platform game aesthetically inspired by Minecraft.
+      Help the two characters reach the portal at the end. Collect treasure, stomp on
+      enemies, and avoid pits as you make your way through each level.</p>
+    <span>Mc8Bit</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/color-maze-puzzle/">
+      <img src="image\Color Maze Puzzle.png">
+    </a>
+    <h3>Color Maze Puzzle</h3>
+    <p>This is a 100-stage paint the maze path-making puzzle game. Move the ball across
+      all the floor tiles on the maze to paint it completely. Your paint paths can
+      cross over each other, but you must paint every cell on the grid.</p>
+    <span>Color Maze Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/merge-candy-game/">
+      <img src="image\Merge Candy Game.png">
+    </a>
+    <h3>Merge Candy Game</h3>
+    <p>This is a candy-themed merging game inspired by the original Suika Game. Drop
+      candies into the play space and bring together identical candy pieces to merge
+      them.</p>
+    <span>Merge Candy Game</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/blockbot/">
+      <img src="image\BlockBot.png">
+    </a>
+    <h3>BlockBot</h3>
+    <p>This is a 20-stage block matching game. Help the robot make sets of identical
+      adjacent blocks by grabbing blocks off the stacks and throwing them back at the
+      stacks from other positions. Complete all the required matches to beat each
+      level and unlock the next.</p>
+    <span>BlockBot</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/gem-blitz-match-mastery/">
+      <img src="image\Gem Blitz Match Mastery.png">
+    </a>
+    <h3>Gem Blitz Match Mastery</h3>
+    <p>This is a connect 3-type puzzle game. Move each gem one by one and form rows of 3
+      of a kind to remove them. Clear the rows in the correct order to remove all the
+      gems. Play through all 20 stages.</p>
+    <span>Gem Blitz Match Mastery</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/sort-numbers-puzzle/">
+      <img src="image\Sort Numbers Puzzle.png">
+    </a>
+    <h3>Sort Numbers Puzzle</h3>
+    <p>This is a slide puzzle with numbers instead of a picture. Slide the number tiles
+      one at a time until you sort them all in the proper order.</p>
+    <span>Sort Numbers Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/color-match-squares/">
+      <img src="image\Color Match Squares.png">
+    </a>
+    <h3>Color Match Squares</h3>
+    <p>This is a simple yet slightly challenging sorting game. Sort the items into boxes
+      according to their color as they pass by the conveyor belt. Be warned; the
+      machine works fast.</p>
+    <span>Color Match Squares</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/fortune-cats-slots/">
+      <img src="image\Fortune Cats Slots.png">
+    </a>
+    <h3>Fortune Cats Slots</h3>
+    <p>This is an online game of slots themed for the Internet’s favorite animal.
+      Place your bets and spin.</p>
+    <span>Fortune Cats Slots</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/launch-the-ball/">
+      <img src="image\Launch The Ball.png">
+    </a>
+    <h3>Launch The Ball</h3>
+    <p>This is a simple 30-stage ball launching game where players must aim with care.
+      Ricochet the ball off the walls the required number of times and have it exit
+      through the door to clear the room. You must hit the walls the precise number of
+      times shown (no more and no less) to open the exit & not fail the level.</p>
+    <span>Launch The Ball</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/monster-tetrix/">
+      <img src="image\Monster Tetrix.png">
+    </a>
+    <h3>Monster Tetrix</h3>
+    <p>This is a monster-themed line clearing game inspired by Tetris. Drop monster
+      blocks (tetrominos) onto the bottom of the shaft. Form and clear full lines of
+      blocks for as long as you can.</p>
+    <span>Monster Tetrix</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/ball-car/">
+      <img src="image\Ball Car.png">
+    </a>
+    <h3>Ball Car</h3>
+    <p>This is an exceptionally precarious ragdoll physics driving game. Keep the ball
+      inside the car at all times. Move as quickly as you can in bumpy terrain before
+      the screen scrolls past you.</p>
+    <span>Ball Car</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/circuitgates/">
+      <img src="image\CircuitGates.png">
+    </a>
+    <h3>CircuitGates</h3>
+    <p>This is a 20-stage logic puzzle game that introduces young learners to the
+      concept of logic gates in computing. Turn on the correct series of circuit
+      lights that will activate the entire circuit.</p>
+    <span>CircuitGates</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/ping-pong-prodigy/">
+      <img src="image\Ping Pong Prodigy.png">
+    </a>
+    <h3>Ping Pong Prodigy</h3>
+    <p>This is a table tennis-inspired hitting game. Return all the balls served at you
+      for as long as you can.</p>
+    <span>Ping Pong Prodigy</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/division-memory/">
+      <img src="image\Division Memory.png">
+    </a>
+    <h3>Division Memory</h3>
+    <p>This is a card matching game where you must pair up the numbers with the
+      dividends and divisors that led to them.</p>
+    <span>Division Memory</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/dinos-fortune/">
+      <img src="image\Dino’s Fortune.png">
+    </a>
+    <h3>Dino’s Fortune</h3>
+    <p>This is a cartoon dinosaur-themed game of online slots. Place your bets and spin
+      to see if you get a brontosaurus-sized fortune (in play money credits).</p>
+    <span>Dino’s Fortune</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/zombie-attack-game/">
+      <img src="image\Zombie Attack Game.png">
+    </a>
+    <h3>Zombie Attack Game</h3>
+    <p>This is a cartoon zombie survival game. Last for as long as you can while
+      shooting down zombies left and right.</p>
+    <span>Zombie Attack Game</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/construction-worker-bubble-shooter/">
+      <img src="image\Construction Worker Bubble Shooter.png">
+    </a>
+    <h3>Construction Worker Bubble Shooter</h3>
+    <p>This is a themed bubble shooting game. Shoot bubbles at the stack and for groups
+      of three or more identical bubbles to clear them. Clear as many as you can
+      within 2 minutes and 30 seconds.</p>
+    <span>Construction Worker Bubble Shooter</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/monster-fusion/">
+      <img src="image\Monster Fusion.png">
+    </a>
+    <h3>Monster Fusion</h3>
+    <p>This is a simple color matching game. Help the monster cube absorb the others by
+      pairing it up with a cube of the same color. Keep absorbing lines of cubes until
+      the stack of cubes reaches the top of the shaft. Hit the bomb cube to blow up
+      multiple rows.</p>
+    <span>Monster Fusion</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/math-forest-match/">
+      <img src="image\Math Forest Match.png">
+    </a>
+    <h3>Math Forest Match</h3>
+    <p>This is a timed math quiz game. Match all the operations in a set to the numbers
+      that result from them as quickly as you can. Complete as many sets as possible
+      within the time limit provided.</p>
+    <span>Math Forest Match</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/redman/">
+      <img src="image\Redman.png">
+    </a>
+    <h3>Redman</h3>
+    <p>This is a 15-stage pixelated obstacle course platforming video game. Avoid
+      running into spikes & do not fall off platforms. Make it through the blue
+      door to exit to the next stage. The game is rich with tricks as spikes may move
+      or come out of the ground at any time. The ground itself may also move or
+      disappear!</p>
+    <span>Redman</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/rolling-in-gears/">
+      <img src="image\Rolling in Gears.png">
+    </a>
+    <h3>Rolling in Gears</h3>
+    <p>In this game you must time the movements of a grand mechanism to bring a ball
+      safely toward a funnel and away from the red automated machine works that could
+      damage it. Use spinning gears, moving platforms, magnetic forcefields, and
+      energy beams to push or pull the ball toward safety. Play through all 35 stages.</p>
+    <span>Rolling in Gears</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/pipe-way/">
+      <img src="image\Pipe Way.png">
+    </a>
+    <h3>Pipe Way</h3>
+    <p>This is a 30-stage rotating pipe logic game. Turn the pipes around to create a
+      continuous path connecting the outflow and inflow. Create a path as quickly as
+      you can and earn up to a 3-styar rating on each stage.</p>
+    <span>Pipe Way</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/mr-apple-adventures/">
+      <img src="image\Mr Apple Adventures.png">
+    </a>
+    <h3>Mr Apple Adventures</h3>
+    <p>This is an 8-stage platforming game featuring an elderly old man with an appetite
+      for fruit. Help Mr. Apple collect as many apples and coins as he can while
+      evading monsters. Grab the keys to open the treasure chests. Make it to the end
+      of each level to unlock the next.</p>
+    <span>Mr Apple Adventures</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/mr-apple/">
+      <img src="image\Mr Apple.png">
+    </a>
+    <h3>Mr Apple</h3>
+    <p>In this game you must collect as many apples as you can while running away from
+      the monsters running amok throughout the level.</p>
+    <span>Mr Apple</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/fruit-watermelon-merge/">
+      <img src="image\Fruit Watermelon Merge.png">
+    </a>
+    <h3>Fruit Watermelon Merge</h3>
+    <p>This is a fruit-themed merging game inspired by Suika Game. Drop fruits down the
+      shaft and merge identical fruits together until you form the watermelon.</p>
+    <span>Fruit Watermelon Merge</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/friday-night-funkin-first-date/">
+      <img src="image\Friday Night Funkin First Date.png">
+    </a>
+    <h3>Friday Night Funkin First Date</h3>
+    <p>This is a dress up doll game inspired by Friday Night Funkin. Dress up the two
+      characters in trendy threads in time for date night.</p>
+    <span>Friday Night Funkin First Date</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/2048-block-blast-puzzle/">
+      <img src="image\2048 Block Blast Puzzle.png">
+    </a>
+    <h3>2048 Block Blast Puzzle</h3>
+    <p>This is a tile breaker game. Select a set of adjacent blocks with the same value
+      to merge all of them into a single tile worth double the amount of any of the
+      individual blocks.</p>
+    <span>2048 Block Blast Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/balance/">
+      <img src="image\Balance.png">
+    </a>
+    <h3>Balance</h3>
+    <p>This is a platform balancing and obstacle evasion game. Keep the blue box from
+      getting hit by the falling red balls by tilting the seesaw it is on. Collect the
+      stars to earn extra points. Don’t tilt the seesaw at too steep an angle
+      too long.</p>
+    <span>Balance</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/crystal-connect/">
+      <img src="image\Crystal Connect.png">
+    </a>
+    <h3>Crystal Connect</h3>
+    <p>This is a story-based Mahjong Connect game. Help a village rebuild after the
+      onslaught of a dragon by extracting crystals from its mines. Match the crystals
+      with a clear path that turns no more than twice and does not pass through other
+      stones to remove them for use.</p>
+    <span>Crystal Connect</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/tap-away/">
+      <img src="image\Tap Away.png">
+    </a>
+    <h3>Tap Away</h3>
+    <p>This is a 72-stage block removal spatial logic puzzle game. The cubes that make
+      up a shape move in a direction specified by their arrows. Remove the cubes in
+      the correct order to clear the entire shape within the limited move count.</p>
+    <span>Tap Away</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/fortune-panda-slots/">
+      <img src="image\Fortune Panda Slots.png">
+    </a>
+    <h3>Fortune Panda Slots</h3>
+    <p>This is a panda bear-themed game of virtual slots. Place your bets, spin, and see
+      if Lady Luck smiles on you.</p>
+    <span>Fortune Panda Slots</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/die-die/">
+      <img src="image\Die Die.png">
+    </a>
+    <h3>Die Die</h3>
+    <p>This is a deceptively simple troll version of a classic retro escape room game.
+      Try to make your way to the door while various obstacles engage before your
+      eyes. Play through all 10 stages.</p>
+    <span>Die Die</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/animals-merge-game/">
+      <img src="image\Animals Merge Game.png">
+    </a>
+    <h3>Animals Merge Game</h3>
+    <p>This is a ball merging game inspired by Suika Game and themed for animals. Merge
+      animal balls together to earn points and create larger animals. Keep merging
+      until you make the elephant.</p>
+    <span>Animals Merge Game</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/penguin-puzzle/">
+      <img src="image\Penguin Puzzle.png">
+    </a>
+    <h3>Penguin Puzzle</h3>
+    <p>This is a 50-stage slide puzzle game where players move the pixelated penguin
+      around the stage sliding from side to side until it runs into something. Collect
+      as many coins as you can, grab the key, and exit through the pink portal to the
+      next stage.</p>
+    <span>Penguin Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/dont-come-near-me/">
+      <img src="image\Don’t Come Near Me.png">
+    </a>
+    <h3>Don’t Come Near Me</h3>
+    <p>In this game you play as a very touchy ninja beset by monsters at all sides.
+      Punch them away as they approach you… or else!</p>
+    <span>Don’t Come Near Me</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/goal-pinball-jungle/">
+      <img src="image\Goal Pinball Jungle.png">
+    </a>
+    <h3>Goal Pinball Jungle</h3>
+    <p>This is an animal themed soccer shooting game. Patterned after pinball, this game
+      relies on paddles to shoot the ball into the goals. Score 5 goals before the
+      timer expires to beat each of the 30 levels.</p>
+    <span>Goal Pinball Jungle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/metal-merge-nuts-and-bolts/">
+      <img src="image\Metal Merge Nuts and Bolts.png">
+    </a>
+    <h3>Metal Merge Nuts and Bolts</h3>
+    <p>This is a merging game inspired by the original Suika Game. Drop nuts, bolts, and
+      washers down the play area and see if you can merge identical ones together. Use
+      the current item and next up item to determine where best to make each play.
+      Keep merging until you run out of space & see if you can merge to the
+      twentieth item.</p>
+    <span>Metal Merge Nuts and Bolts</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/color-connect-game/">
+      <img src="image\Color Connect Game.png">
+    </a>
+    <h3>Color Connect Game</h3>
+    <p>This is an idle color match clearing game. Connect and clear two or more
+      identically colored adjacent dots from the grid. Keep doing this for as long as
+      you want, or until you run out of valid moves.</p>
+    <span>Color Connect Game</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/block-push-puzzle/">
+      <img src="image\Block Push Puzzle.png">
+    </a>
+    <h3>Block Push Puzzle</h3>
+    <p>This is a 38-stage slide puzzle game. Get the blocks onto the gray square with a
+      dot on it to beat each stage. Collect all the white energy orbs by sliding
+      through them.</p>
+    <span>Block Push Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/push-puzzle-football/">
+      <img src="image\Push Puzzle Football.png">
+    </a>
+    <h3>Push Puzzle Football</h3>
+    <p>This is a 30-stage turn-based path-making puzzle game. Push the soccer balls in
+      the right order to get them all to the goals.</p>
+    <span>Push Puzzle Football</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/rapid-seven-slots/">
+      <img src="image\Rapid Seven Slots.png">
+    </a>
+    <h3>Rapid Seven Slots</h3>
+    <p>This is a simple game of slots. Get 3 identical icons in any of the 3 rows to
+      win.</p>
+    <span>Rapid Seven Slots</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/happy-cat-adventure/">
+      <img src="image\Happy Cat Adventure.png">
+    </a>
+    <h3>Happy Cat Adventure</h3>
+    <p>This is a simple 8-level 2D platforming game. As a cat, collect all 5 stars to
+      open the door to your house. Make it to the house without getting killed by the
+      monsters and collect any lemons you encounter along the way to unlock the next
+      stage.</p>
+    <span>Happy Cat Adventure</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/gravity-fruit-merge/">
+      <img src="image\Gravity Fruit Merge.png">
+    </a>
+    <h3>Gravity Fruit Merge</h3>
+    <p>This is a Suika Game-inspired fruit merging game. Form larger fruits by floating
+      up identical fruit slices and pairing them together. Keep merging fruits until
+      you get the watermelon.</p>
+    <span>Gravity Fruit Merge</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/detective-and-the-thief/">
+      <img src="image\Detective and the Thief.png">
+    </a>
+    <h3>Detective and the Thief</h3>
+    <p>This is a 50-stage path-making puzzle game. Lead detectives to their respective
+      suspects. Don’t let the detectives hit any obstacles or each other.</p>
+    <span>Detective and the Thief</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/gravity-escape-game/">
+      <img src="image\Gravity Escape Game.png">
+    </a>
+    <h3>Gravity Escape Game</h3>
+    <p>This is a 15-stage escape room puzzle game. Find the right path to slide around
+      the island and make your way to the door. On some stages you also need to slide
+      boxes to activate switches which open gates. The screen wraps, but you have to
+      safely land. Careful not to fly off in the wrong direction or you can get stuck
+      flying endlessly in space.</p>
+    <span>Gravity Escape Game</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/spot-the-difference-the-garden/">
+      <img src="image\Spot The Difference The Garden.png">
+    </a>
+    <h3>Spot The Difference The Garden</h3>
+    <p>This is a simple 40-stage difference finding game themed after plants and
+      flowers. Find the 3 subtle differences between the images before the timer runs
+      out. Use a hint if you get stuck.</p>
+    <span>Spot The Difference The Garden</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/scribble-world-logic-puzzle/">
+      <img src="image\Scribble World Logic Puzzle.png">
+    </a>
+    <h3>Scribble World Logic Puzzle</h3>
+    <p>This is a 20-stage logic puzzle platformer. Grab the key and then make it through
+      the open door. Use your mouse as needed to grab, hold, move, or cut items as
+      needed. Get the key and pass through the door to the next stage.</p>
+    <span>Scribble World Logic Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/clicker-cute-animals/">
+      <img src="image\Clicker Cute Animals.png">
+    </a>
+    <h3>Clicker Cute Animals</h3>
+    <p>This is a simple idle clicker game where players must tap the space bar or click
+      on the animal to generate active income. Purchase fruits to boost active and
+      passive income sources. Unlock a dozen different animals, 11 different hats, and
+      5 different scenes.</p>
+    <span>Clicker Cute Animals</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/slime-quest-waters-edge/">
+      <img src="image\Slime Quest Water’s Edge.png">
+    </a>
+    <h3>Slime Quest Water’s Edge</h3>
+    <p>This is a simple 20-stage slide puzzle game where you must help the thirsty slime
+      make it to the water. Time your moves to avoid running into spikes, lava, moving
+      crates, or fireballs from shooters on your journey.</p>
+    <span>Slime Quest Water’s Edge</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/warplane-racing/">
+      <img src="image\Warplane Racing.png">
+    </a>
+    <h3>Warplane Racing</h3>
+    <p>This is a racing-themed math game. Choose the correct number of spaces to the
+      nearest landing pad to move your plane. Have your plane reach the destination
+      before your opponent to win.</p>
+    <span>Warplane Racing</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/drag-and-drop-block-puzzle/">
+      <img src="image\Drag and Drop Block Puzzle.png">
+    </a>
+    <h3>Drag and Drop Block Puzzle</h3>
+    <p>This is a 25-stage pegboard-inspired spatial logic puzzle game. Move the blocks
+      so they fit over all the white dots on the grid.</p>
+    <span>Drag and Drop Block Puzzle</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/sum-forest-adventure/">
+      <img src="image\Sum Forest Adventure.png">
+    </a>
+    <h3>Sum Forest Adventure</h3>
+    <p>This is a simple addition practice game. Players must select a variety of number
+      tiles which add up to the target sum shown at the top center. Repeat the process
+      until each stage is clear. Play through all 15 levels.</p>
+    <span>Sum Forest Adventure</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/stelar-trajectory/">
+      <img src="image\Stelar Trajectory.png">
+    </a>
+    <h3>Stelar Trajectory</h3>
+    <p>This is a simple 40-stage ricochet ball shooting game where you must create a
+      path through which the ball can pass to run into all the stars before the ball
+      moves offscreen.</p>
+    <span>Stelar Trajectory</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/hungry-caterpillar/">
+      <img src="image\Hungry Caterpillar.png">
+    </a>
+    <h3>Hungry Caterpillar</h3>
+    <p>This is a 24-stage platforming logic puzzle game. Create a path which allows the
+      caterpillar to eat all the fruits and then pass through the exit portal while
+      avoiding the sharp blades and not falling into the water.</p>
+    <span>Hungry Caterpillar</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/super-bouncy-egg/">
+      <img src="image\Super Bouncy Egg.png">
+    </a>
+    <h3>Super Bouncy Egg</h3>
+    <p>This is a 30-stage physics platforming puzzle game. Drag springs and other
+      objects around the stage to create a safe bouncing or rolling path for the egg
+      to get it into the basket at the end of the stage. Avoid running into TNT or
+      having the egg fall off platform.</p>
+    <span>Super Bouncy Egg</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/memorize-numbers/">
+      <img src="image\Memorize Numbers.png">
+    </a>
+    <h3>Memorize Numbers</h3>
+    <p>This is a timed memory game. Enter the numbers that were previously shown
+      onscreen before the timer reaches zero.</p>
+    <span>Memorize Numbers</span>
+  </article>
+
+  <article class="card">
+    <a href="https://plays.org/game/pizza-guy-puzzle/">
+      <img src="image\Pizza Guy Puzzle.png">
+    </a>
+    <h3>Pizza Guy Puzzle</h3>
+    <p>This is a 25-stage route planning game where you must draw paths which help the
+      pizza guy collect the slices of pizza while avoiding hazards. Make it to the
+      pizza box at the end of each stage to unlock the next.</p>
+    <span>Pizza Guy Puzzle</span>
+  </article>
+  </div>
+</body>
+
+</html>
